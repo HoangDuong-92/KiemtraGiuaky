@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựn hàm tính tổng</title>
+</head>
+<body>
+<h2> Enter a Number</h2>
+<tr>
+    <td>Enter a Number:</td>
+</tr>
+<input type="text" id="number" placeholder="Nhập số">
+<button type="button" onclick="Check()">Show </button>
+<script>
+    function Check() {
+        let num = document.getElementById("number").value;
+        let tong = 0;
+        for (let i = 1; i < num;i++){
+            tong = tong + i;
+        }
+        document.write(tong);
+
+    }
+</script>
+</body>
+</html>
