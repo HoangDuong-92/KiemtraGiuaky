@@ -2,9 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bài 5</title>
 </head>
 <body>
-$END$
+    <script>
+        let array = [
+            [1,2,3,4,6,9,6,8],
+            [2,4,6,8,5,7,3,2],
+            [7,4,8,9,3,6,5,9],
+            [4,8,2,1,7,7,2,7],
+            [7,4,8,9,3,6,5,9],
+            [7,4,8,9,3,6,5,9],
+            [7,4,8,9,3,6,5,9],
+            [7,4,8,9,3,6,5,9],
+        ];
+        let len = array.length;
+        let data = "";
+        for (let i = 0;i < len;i++){
+            data += "<br>";
+            for (let j = 0;j < len;j++){
+                data += array[i][j]+ "&nbsp;&nbsp";
+            }
+        }
+        document.write(data +"<br>");// tạo ra hình vuông ma trận
+
+        let sum1 = 0;// tính đường chéo 1
+        for (let i = 0;i < len;i++){
+            for (let j = 0;j < len;j++){
+                if (i === j){
+                    sum1 += array[i][j];
+                }
+            }
+        }
+
+        document.write("đường chéo thứ nhất:");
+        document.write(sum1 + "<br>");
+        // tính đường chéo thứ 2 . ngược lại  với đường chéo ban đầu
+
+        let sum2 = 0;
+        for (let i =len -1 ;i >= 0 ;i--){
+            for (let j = 0;j < len;j++){
+                if (i === len-1-j){
+                    sum2 += array[i][j];
+                }
+            }
+        }
+        document.write("Đương chéo thứ hai :");
+        document.write(sum2 + "<br>");
+
+    </script>
 </body>
 </html>
